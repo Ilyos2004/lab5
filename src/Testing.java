@@ -14,13 +14,16 @@ import java.util.LinkedHashSet;
 public class Testing {
     public static void main(String[] args) {
         LinkedHashSet<StudyGroup> mySet = new LinkedHashSet<>();
-        /*Static.formatter.format(new Date());*/
-        StudyGroup p31312 = new StudyGroup("p3131", new Coordinates(234F,343), 20, FormOfEducation.DISTANCE_EDUCATION, Semester.FIFTH, new Person("Andrey", 180, Color.BLACK,Color.BLUE, Country.FRANCE));
-        mySet.add(p31312);
+
         CsvSave cs = new CsvSave();
-        cs.saveCsv(mySet);
-        for (StudyGroup s: mySet){
-            System.out.println(s.getId());
-        }
+        /*Static.formatter.format(new Date());*/
+        /*StudyGroup p31312 = new StudyGroup("p3131", new Coordinates(234F,343), 20, FormOfEducation.DISTANCE_EDUCATION, Semester.FIFTH, new Person("Andrey", 180, Color.BLACK,Color.BLUE, Country.FRANCE));
+        StudyGroup p3131 = new StudyGroup("p3131", new Coordinates(234F,343), 20, FormOfEducation.DISTANCE_EDUCATION, Semester.FIFTH, new Person("Andrey", 180, Color.BLACK,Color.BLUE, Country.FRANCE));
+        StudyGroup p313 = new StudyGroup("p3131", new Coordinates(234F,343), 20, FormOfEducation.DISTANCE_EDUCATION, Semester.FIFTH, new Person("Andrey", 180, Color.BLACK,Color.BLUE, Country.FRANCE));
+        mySet.add(p31312);
+        mySet.add(p3131);
+        mySet.add(p313);
+        cs.saveCsv(mySet);*/
+        System.out.println(mySet.size());
     }
 }

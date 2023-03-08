@@ -1,1 +1,4 @@
 id,name,coordinate.x,coordinate.y,creationDate,studentsCount,formOfEducation,semesterEnum,groupAdmin.name,groupAdmin.weight,groupAdmin.eyeColor,groupAdmin.hairColor,groupAdmin.nationality
+"0","p3131","234.0","343.0","08.03.2023 05:22:08","20","DISTANCE_EDUCATION","FIFTH","Andrey","180","BLACK","BLUE","FRANCE"
+"1","p3131","234.0","343.0","08.03.2023 05:22:08","20","DISTANCE_EDUCATION","FIFTH","Andrey","180","BLACK","BLUE","FRANCE"
+"2","p3131","234.0","343.0","08.03.2023 05:22:08","20","DISTANCE_EDUCATION","FIFTH","Andrey","180","BLACK","BLUE","FRANCE"

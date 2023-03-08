@@ -12,8 +12,9 @@ public class CsvSave {
     public boolean saveCsv(LinkedHashSet<StudyGroup> mySet){
         try {
             PrintWriter output = new PrintWriter(new FileWriter(Static.filename.toString()), true);
+            output.println("id,name,coordinate.x,coordinate.y,creationDate,studentsCount,formOfEducation,semesterEnum,groupAdmin.name,groupAdmin.weight,groupAdmin.eyeColor,groupAdmin.hairColor,groupAdmin.nationality");
             for(StudyGroup s: mySet) {
-                output.write(s.toStringCSV() + "\n");
+                output.print(s.toStringCSV() + "\n");
             }
             output.close();
             return true;
