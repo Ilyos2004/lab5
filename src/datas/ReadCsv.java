@@ -12,13 +12,14 @@ public class ReadCsv {
         int s = 0;
         String line;
         LinkedHashSet<StudyGroup> mySet = new LinkedHashSet<>();
+        DatasParse dtparse = new DatasParse();
 
         try {
             Scanner sc = new Scanner(Static.databaseFile);
             while(sc.hasNextLine()){
                 line = sc.nextLine();
                 if(line.length() > 0 && s != 0){
-                    StudyGroup group = null;
+                    StudyGroup group = dtparse.csvReader(line);
                     mySet.add(group);
                 }
                 s = s + 1;

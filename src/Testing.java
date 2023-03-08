@@ -2,6 +2,7 @@ import classes.Coordinates;
 import classes.Person;
 import classes.StudyGroup;
 import datas.CsvSave;
+import datas.ReadCsv;
 import enums.Color;
 import enums.Country;
 import enums.FormOfEducation;
@@ -25,13 +26,5 @@ public class Testing {
         mySet.add(p3131);
         mySet.add(p313);
         cs.saveCsv(mySet);*/
-        System.out.println(mySet.size());
-        Date date = null;
-        try {
-            date = Static.formatter.parse("08.03.2023 05:22:08");
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        System.out.println(date);
     }
 }

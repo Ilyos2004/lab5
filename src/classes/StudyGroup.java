@@ -108,5 +108,20 @@ public class StudyGroup {
     public String toStringCSV() {
         return (String) ("\"" + this.id + "\"," + "\"" + this.name + "\"," + "\"" + this.coordinates.getX() + "\"," + "\"" + this.coordinates.getY() + "\"," + "\"" + this.getCreationDate() + "\"," + "\"" + this.getStudentsCount() + "\"," + "\"" + this.formOfEducation.name() + "\"," + "\"" + this.semesterEnum.name() + "\"," + "\"" + this.groupAdmin.getName() + "\"," + "\"" + this.groupAdmin.getWeight() + "\"," + "\"" + this.groupAdmin.getEyeColor().name() + "\"," + "\"" + this.groupAdmin.getHairColor().name() + "\"," + "\"" + this.groupAdmin.getNationality().name() + "\"");
     }
+
+    @Override
+    public String toString() {
+        return "StudyGroup{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", coordinates=" + coordinates +
+                ", creationDate=" + creationDate +
+                ", studentsCount=" + studentsCount +
+                ", formOfEducation=" + formOfEducation +
+                ", semesterEnum=" + semesterEnum +
+                ", groupAdmin=" + groupAdmin +
+                ", idCnt=" + idCnt +
+                '}';
+    }
 }
 
