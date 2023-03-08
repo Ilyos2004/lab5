@@ -8,6 +8,7 @@ import enums.FormOfEducation;
 import enums.Semester;
 import statics.Static;
 
+import java.text.ParseException;
 import java.util.Date;
 import java.util.LinkedHashSet;
 
@@ -25,5 +26,12 @@ public class Testing {
         mySet.add(p313);
         cs.saveCsv(mySet);*/
         System.out.println(mySet.size());
+        Date date = null;
+        try {
+            date = Static.formatter.parse("08.03.2023 05:22:08");
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        System.out.println(date);
     }
 }
