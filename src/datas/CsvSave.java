@@ -11,9 +11,9 @@ import java.util.LinkedHashSet;
 public class CsvSave {
     public boolean saveCsv(LinkedHashSet<StudyGroup> mySet){
         try {
-            PrintWriter output = new PrintWriter(new File(Static.filename.toString(), true));
+            PrintWriter output = new PrintWriter(new FileWriter(Static.filename.toString()), true);
             for(StudyGroup s: mySet) {
-                output.print(id.toString());
+                output.write(s.toStringCSV() + "\n");
             }
             output.close();
             return true;

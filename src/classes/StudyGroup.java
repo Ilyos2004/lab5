@@ -3,6 +3,7 @@ package classes;
 import datas.IdController;
 import enums.FormOfEducation;
 import enums.Semester;
+import statics.Static;
 
 import java.util.Date;
 
@@ -64,8 +65,8 @@ public class StudyGroup {
         this.coordinates = coordinates;
     }
 
-    public Date getCreationDate() {
-        return creationDate;
+    public String getCreationDate() {
+        return Static.formatter.format(creationDate);
     }
 
     public void setCreationDate(Date creationDate) {
@@ -102,6 +103,10 @@ public class StudyGroup {
 
     public void setGroupAdmin(Person groupAdmin) {
         this.groupAdmin = groupAdmin;
+    }
+
+    public String toStringCSV() {
+        return (String) ("\"" + this.id + "\"," + "\"" + this.name + "\"," + "\"" + this.coordinates.getX() + "\"," + "\"" + this.coordinates.getY() + "\"," + "\"" + this.getCreationDate() + "\"," + "\"" + this.getStudentsCount() + "\"," + "\"" + this.formOfEducation.name() + "\"," + "\"" + this.semesterEnum.name() + "\"," + "\"" + this.groupAdmin.getName() + "\"," + "\"" + this.groupAdmin.getWeight() + "\"," + "\"" + this.groupAdmin.getEyeColor().name() + "\"," + "\"" + this.groupAdmin.getHairColor().name() + "\"," + "\"" + this.groupAdmin.getNationality().name() + "\"");
     }
 }
 

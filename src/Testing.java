@@ -1,6 +1,7 @@
 import classes.Coordinates;
 import classes.Person;
 import classes.StudyGroup;
+import datas.CsvSave;
 import enums.Color;
 import enums.Country;
 import enums.FormOfEducation;
@@ -16,6 +17,8 @@ public class Testing {
         /*Static.formatter.format(new Date());*/
         StudyGroup p31312 = new StudyGroup("p3131", new Coordinates(234F,343), 20, FormOfEducation.DISTANCE_EDUCATION, Semester.FIFTH, new Person("Andrey", 180, Color.BLACK,Color.BLUE, Country.FRANCE));
         mySet.add(p31312);
+        CsvSave cs = new CsvSave();
+        cs.saveCsv(mySet);
         for (StudyGroup s: mySet){
             System.out.println(s.getId());
         }
